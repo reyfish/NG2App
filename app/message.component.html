@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <h2>My Message!</h2>
+    <div [style.color]="'orange'">style using property syntax</div>
+    <div [className]="'Error'">css class using property syntax</div>
+    <div [ngClass]="['bold-text', 'green']">array of classes</div>
+    <div [ngClass]="'italic-text blue'">string of classes</div>
+    <div [ngClass]="{'small-text': true, 'red': true}">object/map of classes</div>
+
+    <div [ngStyle]="{'color': color, 'font-size': size + 'px'}">
+        style using ngStyle
+    </div>
+
+    <div class="container">
+        <div  [ngClass]="'status warning'" >
+
+        </div>
+        <div [ngClass]="'message blue'">
+            {{messageText}}
+            {{level}}
+        </div>
+    </div>
+</body>
+</html>
