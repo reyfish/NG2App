@@ -6,12 +6,28 @@ import { MessageLevel } from './message-level.enum';
     templateUrl: './app/message.component.html',
     styleUrls: ['./app/message.component.css']
 })
-export class MyMessage {
-    @Input() messageText: string = "My Message";
-    @Input() level: MessageLevel = MessageLevel.Error;
+export class MessageComponent {
+    @Input() messageText: string;
+    @Input() set level(value: MessageLevel) {
+        this.levelString = MessageLevel[value];
+        this.isWarning = value == MessageLevel.Warning;
+        this.isError = value == MessageLevel.Error;
+        this.isInfo = value == MessageLevel.Info;
+        this.isSuccess = value == MessageLevel.Success;
+        this.statusClasses = ["status", MessageLevel[value]];
+        
+    }
+
+    private levelString: string;
+    private isError: boolean;
+    private isWarning: boolean;
+    private isInfo: boolean;
+    private isSuccess: boolean;
+    private statusClasses: string[];
 
     constructor() {
         let myDiv = document.getElementsByClassName('message');
+     
         //myDiv.style.color = 'orange';   // updating the div via its properties
     }
 }

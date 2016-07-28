@@ -17,12 +17,16 @@
     </div>
 
     <div class="container">
-        <div  [ngClass]="'status warning'" >
+        <!--<div   [ngClass]="{status: true, 'error': isError, 'warning': isWarning, info: isInfo, success:isSuccess}" >
+
+        </div>-->
+        <div   [ngClass]="statusClasses" >
 
         </div>
+
         <div [ngClass]="'message blue'">
             {{messageText}}
-            {{level}}
+            {{levelString}}
         </div>
     </div>
 </body>

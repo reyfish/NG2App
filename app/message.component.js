@@ -11,7 +11,7 @@ System.register(['@angular/core', './message-level.enum'], function(exports_1, c
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1, message_level_enum_1;
-    var MyMessage;
+    var MessageComponent;
     return {
         setters:[
             function (core_1_1) {
@@ -21,32 +21,43 @@ System.register(['@angular/core', './message-level.enum'], function(exports_1, c
                 message_level_enum_1 = message_level_enum_1_1;
             }],
         execute: function() {
-            MyMessage = (function () {
-                function MyMessage() {
-                    this.messageText = "My Message";
-                    this.level = message_level_enum_1.MessageLevel.Error;
+            MessageComponent = (function () {
+                function MessageComponent() {
                     var myDiv = document.getElementsByClassName('message');
                     //myDiv.style.color = 'orange';   // updating the div via its properties
                 }
+                Object.defineProperty(MessageComponent.prototype, "level", {
+                    set: function (value) {
+                        this.levelString = message_level_enum_1.MessageLevel[value];
+                        this.isWarning = value == message_level_enum_1.MessageLevel.Warning;
+                        this.isError = value == message_level_enum_1.MessageLevel.Error;
+                        this.isInfo = value == message_level_enum_1.MessageLevel.Info;
+                        this.isSuccess = value == message_level_enum_1.MessageLevel.Success;
+                        this.statusClasses = ["status", message_level_enum_1.MessageLevel[value]];
+                    },
+                    enumerable: true,
+                    configurable: true
+                });
                 __decorate([
                     core_1.Input(), 
                     __metadata('design:type', String)
-                ], MyMessage.prototype, "messageText", void 0);
+                ], MessageComponent.prototype, "messageText", void 0);
                 __decorate([
                     core_1.Input(), 
-                    __metadata('design:type', Number)
-                ], MyMessage.prototype, "level", void 0);
-                MyMessage = __decorate([
+                    __metadata('design:type', Number), 
+                    __metadata('design:paramtypes', [Number])
+                ], MessageComponent.prototype, "level", null);
+                MessageComponent = __decorate([
                     core_1.Component({
                         selector: 'my-message',
                         templateUrl: './app/message.component.html',
                         styleUrls: ['./app/message.component.css']
                     }), 
                     __metadata('design:paramtypes', [])
-                ], MyMessage);
-                return MyMessage;
+                ], MessageComponent);
+                return MessageComponent;
             }());
-            exports_1("MyMessage", MyMessage);
+            exports_1("MessageComponent", MessageComponent);
         }
     }
 });
