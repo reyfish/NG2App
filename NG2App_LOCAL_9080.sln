@@ -5,11 +5,6 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NG2App", "NG2App\NG2App.csproj", "{5594C3DE-E137-4BA2-90E4-A8D0DA72B294}"
 EndProject
-<<<<<<< afbcaaa9ab4e864d0719c26d6f100c084d68bbb2
-=======
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypeScriptEnums", "TypeScriptEnums\TypeScriptEnums.csproj", "{094A06FF-DBA8-45CD-A9DD-85FD93E8DAB0}"
-EndProject
->>>>>>> enum
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,13 +15,6 @@ Global
 		{5594C3DE-E137-4BA2-90E4-A8D0DA72B294}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5594C3DE-E137-4BA2-90E4-A8D0DA72B294}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5594C3DE-E137-4BA2-90E4-A8D0DA72B294}.Release|Any CPU.Build.0 = Release|Any CPU
-<<<<<<< afbcaaa9ab4e864d0719c26d6f100c084d68bbb2
-=======
-		{094A06FF-DBA8-45CD-A9DD-85FD93E8DAB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{094A06FF-DBA8-45CD-A9DD-85FD93E8DAB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{094A06FF-DBA8-45CD-A9DD-85FD93E8DAB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{094A06FF-DBA8-45CD-A9DD-85FD93E8DAB0}.Release|Any CPU.Build.0 = Release|Any CPU
->>>>>>> enum
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
